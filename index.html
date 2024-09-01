@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Passport Application Form</title>
+    <link rel="stylesheet" href="f_styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="progress-bar">
+        <div class="progress"></div>
+    </div>
+    <div class="container">
+        <h1 class="form-title">Passport Application Form</h1>
+        <p class="form-description">Providing false statements in passport applications is punishable by law.</p>
+        <form id="passport-form" novalidate>
+            <div class="form-section">
+                <h2 class="section-title">Personal Information</h2>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="first-name">First Name</label>
+                        <input type="text" id="first-name" placeholder="Enter your first name" maxlength="30" required>
+                        <small class="char-count">0/30</small>
+                    </div>
+                    <div class="form-group">
+                        <label for="middle-name">Middle Name</label>
+                        <input type="text" id="middle-name" placeholder="Enter your middle name" maxlength="30">
+                        <small class="char-count">0/30</small>
+                    </div>
+                    <div class="form-group">
+                        <label for="last-name">Last Name</label>
+                        <input type="text" id="last-name" placeholder="Enter your last name" maxlength="30" required>
+                        <small class="char-count">0/30</small>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="mother-name">Mother's Name</label>
+                    <input type="text" id="mother-name" placeholder="Enter your mother's name" required>
+                </div>
+                <div class="form-group">
+                    <label for="father-name">Father's Name</label>
+                    <input type="text" id="father-name" placeholder="Enter your father's name" required>
+                </div>
+                <div class="form-group">
+                    <label for="national-id">National ID(Aadhaar Number) </label>
+                    <input type="text" id="national-id" placeholder="Enter your national ID" pattern="[A-Za-z]{1}[0-9]{9}" title="Format: A123456789" required>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="birth-date">Birth Date</label>
+                        <input type="date" id="birth-date" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="place-of-birth">Place of Birth</label>
+                        <input type="text" id="place-of-birth" placeholder="Enter your place of birth" required>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="gender">Gender</label>
+                        <select id="gender" required>
+                            <option value="">Select Gender</option>
+                            <option value="female">Female</option>
+                            <option value="male">Male</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="marital-status">Marital Status</label>
+                        <select id="marital-status" required>
+                            <option value="">Select Status</option>
+                            <option value="single">Single</option>
+                            <option value="married">Married</option>
+                            <option value="divorced">Divorced</option>
+                            <option value="widowed">Widowed</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-section">
+                <h2 class="section-title">Citizenship & Passport Information</h2>
+                <div class="form-group">
+                    <label for="citizenship">Citizenship Acquired By</label>
+                    <select id="citizenship" required>
+                        <option value="">Select Option</option>
+                        <option value="birth">Birth</option>
+                        <option value="descent">Descent</option>
+                        <option value="registration">Registration</option>
+                        <option value="naturalization">Naturalization</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Have you ever been issued with a passport?</label>
+                    <div class="radio-group">
+                        <input type="radio" id="pass" name="issued-passport" value="yes" required>
+                        <label for="pass"> Yes</label>
+                        <input type="radio" id="pass" name="issued-passport" value="no" required>
+                        <label for="pass"> No</label>
+                    </div>
+                </div>
+                <div id="previous-passport-info" class="form-group hidden">
+                    <label for="previous-passport-number">Previous Passport Number</label>
+                    <input type="text" id="previous-passport-number" placeholder="Enter previous passport number">
+                </div>
+                <div class="form-group">
+                    <label for="passport-expiry">Passport Expiry Date</label>
+                    <input type="date" id="passport-expiry">
+                </div>
+            </div>
+
+            <div class="form-section">
+                <h2 class="section-title">Contact Information</h2>
+                <div class="form-row">
+                    <div class="form-group">
+    <label for="email">Email</label>
+    <div class="input-container">
+        <i class="icon fa fa-envelope"></i>
+        <input type="email" id="email" placeholder="example@example.com" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" title="Enter a valid email address" required>
+    </div>
+</div>
+
+                    <div class="form-group">
+                        <label for="phone-number">Phone Number</label>
+                        <input type="tel" id="phone-number" placeholder="(123) 456-7890" pattern="\(\d{3}\) \d{3}-\d{4}" title="Format: (123) 456-7890" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="address">Address</label>
+                    <input type="text" id="address" placeholder="Street Address" required>
+                </div>
+                <div class="form-group">
+                    <input type="text" placeholder="Street Address Line 2">
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="city">City</label>
+                        <input type="text" id="city" placeholder="Enter your city" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="zip-code">Zip Code</label>
+                        <input type="text" id="zip-code" placeholder="Enter your zip code" pattern="\d{5}" title="Enter a 5-digit zip code" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="country">Country of Residence</label>
+                    <input type="text" id="country" placeholder="Enter your country" required>
+                </div>
+            </div>
+
+            <div class="form-section">
+                <h2 class="section-title">Additional Information</h2>
+                <div class="form-group">
+                    <label for="employment-status">Employment Status</label>
+                    <select id="employment-status" required>
+                        <option value="">Select Status</option>
+                        <option value="employed">Employed</option>
+                        <option value="self-employed">Self-Employed</option>
+                        <option value="student">Student</option>
+                        <option value="unemployed">Unemployed</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="passport-type">Passport Type</label>
+                    <select id="passport-type" required>
+                        <option value="">Select Type</option>
+                        <option value="regular">Regular</option>
+                        <option value="official">Official</option>
+                        <option value="diplomatic">Diplomatic</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="form-footer">
+                <button type="submit">Submit Application</button>
+            </div>
+        </form>
+    </div>
+    <script src="f_script.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
